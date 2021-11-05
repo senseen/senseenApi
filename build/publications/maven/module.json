@@ -1,0 +1,132 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.senseen",
+    "module": "senseenApi",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 15,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "senseenApi-1.0.jar",
+          "url": "senseenApi-1.0.jar",
+          "size": 21273,
+          "sha512": "4bf3e2f90598a2ad0050afa5c346e3c12912120464a562c207ce330b166d7d2560feb596ac4a45c7081da0d886003584e49e351db3f3f94bf6087bf83f0e1e21",
+          "sha256": "aa26a012915cb6fccad91cf874a4807133af42e7101f8f7114e31c3b4f89c54d",
+          "sha1": "6a01c71b29b2ef551a35e51d2d8852a624b0c373",
+          "md5": "84d92d97e964e974f0888360076176d0"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 15,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.squareup.retrofit2",
+          "module": "retrofit",
+          "version": {
+            "requires": "2.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.retrofit2",
+          "module": "converter-moshi",
+          "version": {
+            "requires": "2.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.retrofit2",
+          "module": "converter-gson",
+          "version": {
+            "requires": "2.7.2"
+          }
+        },
+        {
+          "group": "com.squareup.retrofit2",
+          "module": "converter-jackson",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "4.9.1"
+          }
+        },
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "logging-interceptor",
+          "version": {
+            "requires": "4.9.1"
+          }
+        },
+        {
+          "group": "com.fasterxml.jackson.core",
+          "module": "jackson-databind",
+          "version": {
+            "requires": "2.8.5"
+          }
+        },
+        {
+          "group": "com.fasterxml.jackson.core",
+          "module": "jackson-core",
+          "version": {
+            "requires": "2.8.5"
+          }
+        },
+        {
+          "group": "com.fasterxml.jackson.core",
+          "module": "jackson-annotations",
+          "version": {
+            "requires": "2.8.5"
+          }
+        },
+        {
+          "group": "org.json",
+          "module": "json",
+          "version": {
+            "requires": "20171018"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "senseenApi-1.0.jar",
+          "url": "senseenApi-1.0.jar",
+          "size": 21273,
+          "sha512": "4bf3e2f90598a2ad0050afa5c346e3c12912120464a562c207ce330b166d7d2560feb596ac4a45c7081da0d886003584e49e351db3f3f94bf6087bf83f0e1e21",
+          "sha256": "aa26a012915cb6fccad91cf874a4807133af42e7101f8f7114e31c3b4f89c54d",
+          "sha1": "6a01c71b29b2ef551a35e51d2d8852a624b0c373",
+          "md5": "84d92d97e964e974f0888360076176d0"
+        }
+      ]
+    }
+  ]
+}

@@ -73,4 +73,16 @@ public interface StellioApi {
     @NotNull
     Call<Token> connexion(@Body RequestBody body);
 
+    @Headers("Content-Type: application/x-www-form-urlencoded")
+    @POST("/auth/realms/stellio/protocol/openid-connect/token")
+    @NotNull
+    Call<Token> connexionWithCode(@Body RequestBody body);
+
+
+    @Headers("Content-Type: application/x-www-form-urlencoded")
+    @POST("/auth/realms/stellio/protocol/openid-connect/token")
+    @NotNull
+    Call<Token> refreshToken(@Body RequestBody body);
+
+
 }

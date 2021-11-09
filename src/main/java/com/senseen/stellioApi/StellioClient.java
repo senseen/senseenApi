@@ -97,6 +97,37 @@ public class StellioClient {
         }
     }
 
+    //Permet de se connecter au sso en echange d'un code
+    public String connexionWithCode(String clientId, String clientSecret, String code, String redirectUri) throws IOException {
+        body = getBodyConnexionWithCode(clientId,clientSecret, code, redirectUri);
+
+        Call<Token> req = getApi(connexionUrl).connexionWithCode(body);
+        Response<Token> res =req.execute();
+        token=res.body();
+        if(res.isSuccessful()){
+            return res.message();
+        }
+        else{
+            Logger.getLogger("connexion").log(Level.WARNING,res.errorBody().string());
+            return res.errorBody().string();
+        }
+    }
+
+    public String refreshToken(String clientId, String clientSecret) throws IOException {
+        body = getBodyRefreshToken(clientId, clientSecret);
+
+        Call<Token> req = getApi(connexionUrl).refreshToken(body);
+        Response<Token> res =req.execute();
+        token=res.body();
+        if(res.isSuccessful()){
+            return res.message();
+        }
+        else{
+            Logger.getLogger("connexion").log(Level.WARNING,res.errorBody().string());
+            return res.errorBody().string();
+        }
+    }
+
     //permet de creer entity
     public String createEntity(String mainObject) throws IOException {
         hashMap=getHeadersCreate();
@@ -335,6 +366,29 @@ public class StellioClient {
                 .add("grant_type","client_credentials")
                 .add("client_id",clientId)
                 .add("client_secret",clientSecret)
+                .build();
+        return requestBody;
+    }
+
+
+
+    private RequestBody getBodyConnexionWithCode(String clientId, String clientSecret, String code, String redirectUri){
+        RequestBody requestBody = new FormBody.Builder()
+                .add("grant_type","authorization_code")
+                .add("client_id",clientId)
+                .add("client_secret",clientSecret)
+                .add("code", code)
+                .add("redirect_uri",redirectUri)
+                .build();
+        return requestBody;
+    }
+
+    private RequestBody getBodyRefreshToken(String clientId, String clientSecret){
+        RequestBody requestBody = new FormBody.Builder()
+                .add("grant_type", "refresh_token")
+                .add("client_id", clientId)
+                .add("client_secret", clientSecret)
+                .add("refresh_token", token.getRefresh_token())
                 .build();
         return requestBody;
     }

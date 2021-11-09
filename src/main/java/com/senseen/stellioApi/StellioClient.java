@@ -128,6 +128,22 @@ public class StellioClient {
         }
     }
 
+    public String getUserInfos() throws IOException {
+        Call<String> req = getApi(connexionUrl).getUserInfos(token.getAccess_token());
+        Response<String> res =req.execute();
+        if(res.isSuccessful()){
+            return res.body();
+        }
+        else{
+            Logger.getLogger("connexion").log(Level.WARNING,res.errorBody().string());
+            return res.errorBody().string();
+        }
+    }
+
+    public Token getToken() throws IOException {
+        return token;
+    }
+
     //permet de creer entity
     public String createEntity(String mainObject) throws IOException {
         hashMap=getHeadersCreate();

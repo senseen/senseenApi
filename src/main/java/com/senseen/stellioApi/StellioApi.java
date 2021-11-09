@@ -84,5 +84,8 @@ public interface StellioApi {
     @NotNull
     Call<Token> refreshToken(@Body RequestBody body);
 
+    @POST("/auth/realms/stellio/protocol/openid-connect/userinfo")
+    @NotNull
+    Call<String> getUserInfos(@Header("Authorization") String accessToken);
 
 }

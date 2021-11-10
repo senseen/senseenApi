@@ -129,7 +129,8 @@ public class StellioClient {
     }
 
     public String getUserInfos() throws IOException {
-        Call<String> req = getApi(connexionUrl).getUserInfos("Bearer "+token.getAccess_token());
+        hashMap=getHeadersUserInfos();
+        Call<String> req = getApi(connexionUrl).getUserInfos(hashMap);
         Response<String> res =req.execute();
         if(res.isSuccessful()){
             return res.body();
@@ -417,6 +418,12 @@ public class StellioClient {
         hashMap=new HashMap<>();
         hashMap.put("Authorization", "Bearer "+token.getAccess_token());
         hashMap.put("Link", "<https://raw.githubusercontent.com/senseen/ngsild-api-data-models/main/jsonld-contexts/scanSmartMeter-compound.jsonld>; rel=http://www.w3.org/ns/json-ld#context; type=application/json");
+        return hashMap;
+    }
+
+    private HashMap<String,String> getHeadersUserInfos(){
+        hashMap=new HashMap<>();
+        hashMap.put("Authorization", "Bearer "+token.getAccess_token());
         return hashMap;
     }
 

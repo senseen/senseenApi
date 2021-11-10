@@ -86,6 +86,6 @@ public interface StellioApi {
 
     @GET("/auth/realms/stellio/protocol/openid-connect/userinfo")
     @NotNull
-    Call<String> getUserInfos(@Header("Authorization") String accessToken);
+    Call<String> getUserInfos(@HeaderMap HashMap<String,String> headers);
 
 }

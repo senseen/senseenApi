@@ -144,6 +144,10 @@ public class StellioClient {
         return token;
     }
 
+    public void setToken(String accessToken, String refreshToken, int expireIn, int refreshExpireIn) throws IOException {
+        token = new Token(accessToken, refreshToken, expireIn, refreshExpireIn);
+    }
+
     //permet de creer entity
     public String createEntity(String mainObject) throws IOException {
         hashMap=getHeadersCreate();

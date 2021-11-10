@@ -27,11 +27,11 @@
         {
           "name": "senseenApi-1.0.jar",
           "url": "senseenApi-1.0.jar",
-          "size": 21952,
-          "sha512": "e455b1416c80e03e5e79cf4bae25cb0d0f4913a8e8b740345e44cfdce454628c07948971ef26d56f0d7d6562e3985c22db76906711dbfdb227b2b8568ba96ed0",
-          "sha256": "2a02d8b79bba8b16f837dd7c2cd1981d5957cf02c14782fcb3035fd8539337fd",
-          "sha1": "16dcd00e77a811747426d96f65c5be298dca4f5f",
-          "md5": "f01346bb8dc66c1c686e49b1b8aa7ffe"
+          "size": 22036,
+          "sha512": "58b2d2283586b271b00349e333265815934a8c209b4b6ac0a20ca46bf1b2cefa7d49794597744a9a400464bc7a227723f2c00c18dd856527453e661ba9205b99",
+          "sha256": "a5e1561a36d53eff7379e7dbf13b38e5446ee054dfa5f9e1750c5b8a7b490c64",
+          "sha1": "85291391f826870d22b64625a9442981ef2fa194",
+          "md5": "0c96f739ad295d7c80da86fb5d1aa8dd"
         }
       ]
     },
@@ -120,11 +120,11 @@
         {
           "name": "senseenApi-1.0.jar",
           "url": "senseenApi-1.0.jar",
-          "size": 21952,
-          "sha512": "e455b1416c80e03e5e79cf4bae25cb0d0f4913a8e8b740345e44cfdce454628c07948971ef26d56f0d7d6562e3985c22db76906711dbfdb227b2b8568ba96ed0",
-          "sha256": "2a02d8b79bba8b16f837dd7c2cd1981d5957cf02c14782fcb3035fd8539337fd",
-          "sha1": "16dcd00e77a811747426d96f65c5be298dca4f5f",
-          "md5": "f01346bb8dc66c1c686e49b1b8aa7ffe"
+          "size": 22036,
+          "sha512": "58b2d2283586b271b00349e333265815934a8c209b4b6ac0a20ca46bf1b2cefa7d49794597744a9a400464bc7a227723f2c00c18dd856527453e661ba9205b99",
+          "sha256": "a5e1561a36d53eff7379e7dbf13b38e5446ee054dfa5f9e1750c5b8a7b490c64",
+          "sha1": "85291391f826870d22b64625a9442981ef2fa194",
+          "md5": "0c96f739ad295d7c80da86fb5d1aa8dd"
         }
       ]
     }

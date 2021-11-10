@@ -129,7 +129,7 @@ public class StellioClient {
     }
 
     public String getUserInfos() throws IOException {
-        Call<String> req = getApi(connexionUrl).getUserInfos(token.getAccess_token());
+        Call<String> req = getApi(connexionUrl).getUserInfos("Bearer "+token.getAccess_token());
         Response<String> res =req.execute();
         if(res.isSuccessful()){
             return res.body();
